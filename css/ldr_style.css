@@ -1,0 +1,106 @@
+/* ============================================
+   作者：刘定荣(liudingrong)
+   说明：电视剧排行榜选项卡样式，一比一还原效果图
+   规则：所有类名均以 ldr_ 开头
+   ============================================ */
+
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 页面背景（方便观察组件） */
+body {
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    background: #ffffff;
+    padding: 20px;
+}
+
+/* 排行榜整体容器 */
+.ldr_rank_box {
+    width: 234px;
+    border: 1px solid #dddddd;
+    background: #ffffff;
+}
+
+/* ---------- 选项卡区域 ---------- */
+.ldr_tab_nav {
+    display: flex;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* 每个选项卡，四等分 */
+.ldr_tab_item {
+    flex: 1;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+    background: #f7f7f7;
+    border-right: 1px solid #dddddd;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 最后一个选项卡去掉右边框 */
+.ldr_tab_item:last-child {
+    border-right: none;
+}
+
+/* 选中状态：红底白字 */
+.ldr_tab_item.ldr_active {
+    background: #e8423f;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ---------- 榜单内容区域 ---------- */
+.ldr_rank_list {
+    padding: 12px 8px 8px 8px;
+    overflow: hidden;
+}
+
+/* 左右两列 */
+.ldr_rank_col {
+    float: left;
+    width: 50%;
+}
+
+/* 每一条榜单项 */
+.ldr_rank_item {
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 序号小方块 */
+.ldr_rank_num {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    margin-right: 6px;
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+    background: #c3c3c3; /* 4-10 名灰色 */
+    vertical-align: middle;
+}
+
+/* 前三名红色序号 */
+.ldr_rank_num.ldr_top3 {
+    background: #e8423f;
+}
+
+/* 剧名 */
+.ldr_rank_title {
+    font-size: 12px;
+    color: #333333;
+    vertical-align: middle;
+}

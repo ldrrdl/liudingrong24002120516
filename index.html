@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- 作者：刘定荣(liudingrong)  项目：电视剧排行榜选项卡一比一还原 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>电视剧排行榜 - 刘定荣</title>
+    <!-- 样式文件：所有类名、id 均以 ldr_ 开头 -->
+    <link rel="stylesheet" href="css/ldr_style.css">
+</head>
+<body>
+    <!-- 排行榜整体容器 -->
+    <div class="ldr_rank_box" id="ldr_rank_box">
+        <!-- 选项卡区域 -->
+        <ul class="ldr_tab_nav" id="ldr_tab_nav">
+            <li class="ldr_tab_item ldr_active">每日</li>
+            <li class="ldr_tab_item">每周</li>
+            <li class="ldr_tab_item">每月</li>
+            <li class="ldr_tab_item">全部</li>
+        </ul>
+        <!-- 榜单内容区域（JS 动态渲染两列各 5 条） -->
+        <div class="ldr_rank_list" id="ldr_rank_list"></div>
+    </div>
+    <!-- 脚本文件：所有 JS 变量均以 ldr_ 开头 -->
+    <script src="js/ldr_script.js"></script>
+</body>
+</html>
